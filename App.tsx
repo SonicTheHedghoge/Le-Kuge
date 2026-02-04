@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MapPin, Phone, Instagram, Facebook, Clock, ArrowRight, Star, Flame } from 'lucide-react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { MapPin, Phone, Instagram, Facebook, Clock, ArrowRight, Flame } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { MenuSection } from './components/MenuSection';
 import { AIChef } from './components/AIChef';
 import { BUSINESS_INFO, HERO_IMAGES, LOGO_URL } from './constants';

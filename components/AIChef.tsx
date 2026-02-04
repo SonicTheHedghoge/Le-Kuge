@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { MessageCircle, X, Send, ChefHat, Sparkles } from 'lucide-react';
+import { MessageCircle, X, Send, ChefHat } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { chatWithChef } from '../services/geminiService';
 import { ChatMessage } from '../types';

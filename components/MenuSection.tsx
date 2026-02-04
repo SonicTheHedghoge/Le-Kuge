@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MENU_ITEMS } from '../constants';
 import { MenuItem } from '../types';
-import { Flame } from 'lucide-react';
 
 export const MenuSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<'all' | 'pizza' | 'panuozzo'>('all');
@@ -79,7 +78,6 @@ export const MenuSection: React.FC = () => {
 
 const MenuCard: React.FC<{ item: MenuItem }> = ({ item }) => {
   const divRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!divRef.current) return;
@@ -99,8 +97,6 @@ const MenuCard: React.FC<{ item: MenuItem }> = ({ item }) => {
       transition={{ duration: 0.4 }}
       ref={divRef}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       className="group relative rounded-xl overflow-hidden bg-[#121212] border border-white/5 hover:border-white/10 transition-colors duration-500"
     >
       {/* Spotlight Effect Gradient */}
